@@ -1,2 +1,58 @@
 @import url(reset.css);
 @import url(common.css);
+
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.header_up {
+    height: 40px;
+    /* background-color: #d40047; */
+    background-color: #d41935;
+}
+
+.header_up p { 
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    letter-spacing: -2px;
+    line-height: 40px;
+}
+
+.header_down {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 50px;
+}
+
+ul{
+    width: 510px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 135px;
+}
+
+li a{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #d41935;
+}
+
+.header_icons{
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
