@@ -29,7 +29,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .logo img{
@@ -57,6 +56,41 @@ li a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu_bar{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    .header_up{
+        height: 20px;
+    }
+
+    .header_up p { 
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: -1px;
+    }
+    
+    .header_down {
+        height: 60px;
+    }
+
+    .logo img{
+         width: 38px;
+    }
+
+    .menu_wrap,
+    .header_icons{
+        display: none;
+    }
+
+    .menu_bar{
+        display: block;
+    }
+
 }
 
 /* header end */
@@ -95,6 +129,29 @@ li a{
 
 .left_btn:hover{
     right: 110px;
+}
+
+@media screen and (max-width: 768px){
+    .sec_1{
+        height: 50%;
+    }
+    .sec_1_bg{
+        padding-top: 80px;
+    }
+
+    .sec_1_title{
+
+    }
+
+    .title_1{
+        width: 50%;
+        top: 250px;
+    }
+
+    .title_3{
+        width: 50%;
+        top: 250px;
+    }
 }
 
 /* sec_1 ing */
@@ -170,19 +227,22 @@ li a{
 /* ----con_2------ */
 
 
-.swiper-slide {
-    width: 100%;
+/* .swiper-slide {
     display: flex;
     justify-content: space-between;
 }
 
 .con_wrap_2{
-    padding-top: 60px;
+    
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .con_2{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
     font-family: "Noto Sans KR", sans-serif;
     color: #1d1d1d;
     font-weight: 700;
@@ -213,6 +273,69 @@ li a{
   --swiper-navigation-size: 60px;
   --swiper-navigation-sides-offset: 0;
   --swiper-navigation-color: #d41935;
+}
+
+.swiper .mo_con_wrap_2{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    .sec_2_title h3{
+        font-size: 40px;
+        letter-spacing: -3px;
+    }
+
+    .sec_2_title p{
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 10px;
+    }
+
+    .sub_title_2{
+        display: unset;
+    }
+
+    .btn_2{
+        width: 114px;
+        margin-top: 20px;
+    }
+
+    .women{
+        width: 60px;
+        height: 25px;
+        /* border: 1px solid rgba(29, 29, 29, 0.5); */
+        font-size: 12px;
+        letter-spacing: -1px;
+        line-height: 25px;
+    }
+
+    .men{
+        width: 44px;
+        height: 25px;
+        font-size: 12px;
+        letter-spacing: -1px;
+        line-height: 25px;
+    }
+
+    /* -----con_wrap_2 모바일버전으로 스와이퍼 다시하기-------- */
+
+    .con_wrap_2{
+        display: none;
+    }
+
+    .mo_sec_2 .con_wrap_2{
+        display: block;
+    }
+
+    .mo_con_wrap_2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 18px;
+        margin-top: 30px;
+    }
+
+
 }
 
 
@@ -259,8 +382,8 @@ li a{
 }
 
 .sub_title_3{
-    padding-top: 360px;
-    padding-left: 824px;
+    padding-top: 100px;
+    padding-left: 800px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -291,8 +414,26 @@ li a{
     width: 250px;
     height: 80px;
     border-radius: 50px;
-    margin-right: 100px;
-    margin-top: 437px;
+    margin-top: 170px;
+    margin-left: 240px;
+}
+
+@media screen and (max-width: 768px){
+    .bg_3{
+        height: 555px;
+        margin-top: unset;
+    }
+
+
+    .yoga_1{
+        display: none;
+    }
+
+    .yoga_2{
+        width: 346px;
+        top: 186px;
+        left: -50px;
+    }
 }
 
 /* sec_3 end */
@@ -354,24 +495,116 @@ li a{
 .con_right_4{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    row-gap: 30px;
+    row-gap: 50px;
     column-gap: 20px;
     padding-left: 120px;
     padding-right: 100px;
     margin-bottom: 80px;
 }
 
-/* 
-.con_4 img{
-    width: 415px;
-} */
+.con_4{
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #1d1d1d;
+}
+
+.con_title_4{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.con_title_4 h4{
+    font-size: 20px;
+    opacity: 0.7;
+    margin-top: 30px;
+}
+
+.con_title_4 p{
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .section_4{
+        display: unset;
+        position: relative;
+    }
+
+    .con_left_4 h3,
+    .con_left_4 p,
+    .btn_4,
+    .con_right_4{
+        padding: 0 20px;
+    }
+
+    .con_left_4 h3{
+        font-size: 40px;
+        letter-spacing: -3px;
+    }
+
+    .con_left_4 p{
+        font-size: 18px;
+        line-height: 23px;
+        margin-top: 10px;
+    }
+
+    .btn_4{
+        width: 202px;
+        margin-top: 20px;
+    }
+
+    .accessory{
+        width: 78px;
+        height: 25px;
+        font-size: 12px;
+        letter-spacing: -1px;
+        line-height: 25px;
+    }
+
+    .bg_4 img{
+        width: 352px;
+        margin-top: unset;
+    }
+
+    .con_right_4{
+        position: absolute;
+        top: 164px;
+        left: 0;
+    }
+
+    .con_right_4{
+        row-gap: 30px;
+        column-gap: 18px;
+    }
+
+    .con_title_4{
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+    }
+    
+    .con_title_4 h4{
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .con_title_4 p{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    
+}
 
 
 /* sec_4 ing */
 
 
 .section_5{
-    padding-top: 60px;
+    padding-top: 80px;
     position: relative;
 }
 
@@ -413,6 +646,11 @@ li a{
     color: #1d1d1d;
 }
 
+@media screen and (max-width: 768px){
+
+
+}
+
 /* sec_5 end */
 
 .section_6{
@@ -431,13 +669,15 @@ li a{
     margin-top: 60px;
 }
 
+@media screen and (max-width: 768px){
+    
+}
 /* sec_6 end */
 
 footer{
     margin-top: 300px;
     height: 360px;
     background-color: #d41935;
-    padding: 0 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -508,7 +748,35 @@ footer{
     text-align: right;
 }
 
-.sns img{
+/* .sns img{
     width: 32px;
+
+} */
+
+@media screen and (max-width: 768px){
+
+    footer{
+        margin-top: 80px;
+    }
+    .footer_title h3,
+    .footer_sub h3{
+        font-size: 20px;
+        padding-top: 30px;
+        letter-spacing: 0px;
+    }
+
+    .korea{
+        display: none;
+    }
+
+    .hours h3{
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .hours p{
+        font-size: 10px;
+        line-height: 10px;
+    }
 
 }

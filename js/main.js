@@ -25,6 +25,13 @@ $(document).ready(function(){
       },
     });
 
+    var swiper = new Swiper(".mo_sec_2", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+    
+
     var swiper = new Swiper(".sec_6", {
     slidesPerView: 2,
     spaceBetween: 16,
