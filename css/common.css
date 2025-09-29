@@ -6,6 +6,13 @@ footer {
     padding: 0 100px;
 }
 
+.section_2,
+.con_3,
+.section_4,
+.section_6{
+    padding-top: 150px;
+}
+
 
 @media screen and (max-width: 768px){
 
@@ -14,6 +21,8 @@ footer {
     .sec_2_title,
     .con_wrap_2,
     .mo_con_wrap_2,
+    .mo_bg_3,
+    .sub_title_5,
     footer { 
         padding: 0 20px;
     }
@@ -24,6 +33,6 @@ footer {
     .section_4,
     .section_5,
     .section_6{
-        padding: 80px 0;
+        padding-top: 80px;
     }
 }

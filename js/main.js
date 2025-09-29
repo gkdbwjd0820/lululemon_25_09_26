@@ -18,6 +18,24 @@ $(document).ready(function(){
     loop: true
   });
 
+    var swiper = new Swiper(".mo_sec_1", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
+    loop: true
+  });
+
     var swiper = new Swiper(".sec_2", {
       navigation: {
         nextEl: ".swiper-button-next",
