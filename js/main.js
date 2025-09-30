@@ -91,7 +91,7 @@ $(document).ready(function(){
     slideWidth: 540,
     slideMargin: 40,
     ticker: true,
-    speed: 9000
+    speed: 12000
 
   });
 
@@ -102,7 +102,7 @@ $(document).ready(function(){
     slideWidth: 260,
     slideMargin: 10,
     ticker: true,
-    speed: 9000
+    speed: 12000
 
   });
 

@@ -60,7 +60,14 @@ li a{
 
 .menu_bar{
     display: none;
+    cursor: pointer;
 }
+
+#check_input,
+.menu_btn_wrap{
+    display: none;
+}  
+
 
 @media screen and (max-width: 768px){
 
@@ -89,6 +96,41 @@ li a{
 
     .menu_bar{
         display: block;
+        position: relative;
+        z-index: 10;
+    }
+
+    .menu_btn_wrap{
+        display: block;
+        width: 100%;
+        height: 0;
+        /* background-color: #fff; */
+        background: rgba(0, 0, 0, 0.4); /* 반투명 어두운 배경 */
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: 0.5s;
+        overflow: hidden;
+        backdrop-filter: blur(20px); /* 블러 효과 */
+        /* padding: 60px 0; */
+        
+    }
+        /* => menu_btn에 마우스를 올리면 menu_wrap이 나타남 */
+ 
+    .menu_btn_wrap h2{
+        /* padding-top: 20px; */
+        margin-top: 80px;
+        margin-left: 20px;
+        font-size: 60px;
+        font-family: "Belanosima", sans-serif;
+    }
+
+    .menu_btn_wrap a{
+        color: #d41935;
+    }
+
+    #check_input:checked ~ .menu_btn_wrap{
+        height: 100vh;
     }
 
 }
@@ -124,12 +166,20 @@ li a{
     top: 758px;
     right: 140px;
     z-index: 20px;
-    transition: 0.5s;
 }
 
-.left_btn:hover{
-    right: 110px;
+.left_btn img {
+  transition: transform 0.3s ease; /* 부드럽게 움직이도록 */
 }
+
+/* title_1 위에 마우스를 올렸을 때 left_btn 이미지 이동 */
+.title_1:hover ~ .left_btn img {
+  transform: translateX(20px); /* 오른쪽으로 20px 이동 */
+}
+
+/* .title_1:hover .left_btn{
+    right: 110px;
+} */
 
 .mo_section_1{
     display: none;
@@ -150,7 +200,7 @@ li a{
     }
 }
 
-/* sec_1 ing */
+/* sec_1 end */
 
 .sec_2_title h3{
     font-family: "Belanosima", sans-serif;
@@ -164,7 +214,7 @@ li a{
     font-size: 40px;
     font-weight: 500;
     letter-spacing: -3px;
-    line-height: 50px;
+    line-height: 55px;
     color: #1d1d1d;
     opacity: 0.7;
     margin-top: 20px;
@@ -242,10 +292,9 @@ li a{
 }
 
 .con_2{
-
     font-family: "Noto Sans KR", sans-serif;
     color: #1d1d1d;
-    font-weight: 700;
+
     letter-spacing: -1px;
 }
 
@@ -259,20 +308,22 @@ li a{
 
 .con_title_2 h4{
     font-size: 18px;
+    font-weight: 500;  
     opacity: 0.7;
 
 }
 
 .con_title_2 p{
     margin-top: 20px;
-    font-size: 20px;   
+    font-size: 20px; 
+    font-weight: 700;  
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   --swiper-navigation-top-offset: 50%;
   --swiper-navigation-size: 60px;
-  --swiper-navigation-sides-offset: 0;
+  --swiper-navigation-sides-offset: 1.5%;
   --swiper-navigation-color: #d41935;
 }
 
@@ -305,7 +356,6 @@ li a{
     .women{
         width: 60px;
         height: 25px;
-        /* border: 1px solid rgba(29, 29, 29, 0.5); */
         font-size: 12px;
         letter-spacing: -1px;
         line-height: 25px;
@@ -422,8 +472,10 @@ li a{
     font-size: 100px;
     font-weight: 400;
     color: #fff;
-    padding-top: 80px;
-    padding-left: 1546px;
+    display: flex;
+    justify-content: right;
+    padding: 80px 100px;
+    /* padding-left: 1546px; */
 }
 
 .yoga_1{
@@ -470,18 +522,61 @@ li a{
 }
 
 .more_btn{
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 80px;
-    letter-spacing: -1px;
-    color: #d41935;
     background-color: #fff;
     width: 250px;
     height: 80px;
     border-radius: 50px;
     margin-top: 170px;
-    margin-left: 240px;
+    margin-left: 230px;
+    position: relative;
+}
+
+.bar, .bar2{
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgb(255, 154, 176);
+    transition-duration: 0.5s;
+    position: absolute;
+    top: 0;
+}
+
+.bar{
+    right: 0;
+}
+
+.bar2{
+    transition-delay: 0.2s;
+    left: 0;
+}
+
+
+.more_btn h2{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #d41935;
+    line-height: 80px;
+    letter-spacing: -1px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.more_btn:hover .bar{
+    width: 100%;
+}
+
+.more_btn:hover .bar2{
+    width: 100%;
+    background-color: rgb(255, 203, 209);
+}
+
+.more_btn:hover h3{
+    color: white;
 }
 
 .mo_section_3{
@@ -516,7 +611,7 @@ li a{
         width: 188px;
         display: flex;
         flex-direction: column;
-        padding-top: 300px;
+        padding-top: 260px;
         padding-left: 150px;
     }
     
@@ -552,7 +647,6 @@ li a{
     .mo_more_btn{
         width: 40%;
         margin-top: clamp(8px, 6vw, 16px);
-        margin-left: 75px;
         padding: 10px 16px;
         border-radius:999px;
         background:#fff; color:#D51B2B;
@@ -584,7 +678,7 @@ li a{
     font-size: 40px;
     font-weight: 500;
     letter-spacing: -3px;
-    line-height: 50px;
+    line-height: 55px;
     color: #1d1d1d;
     opacity: 0.7;
     margin-top: 20px;
@@ -639,13 +733,13 @@ li a{
 
 .con_4{
     font-family: "Noto Sans KR", sans-serif;
-    font-weight: 700;
     letter-spacing: -1px;
     color: #1d1d1d;
 }
 
 .con_title_4 h4{
     font-size: 20px;
+    font-weight: 500;
     opacity: 0.7;
     margin-top: 30px;
     display: -webkit-box;
@@ -656,6 +750,7 @@ li a{
 
 .con_title_4 p{
     font-size: 22px;
+    font-weight: 700;
     margin-top: 20px;
 }
 
@@ -785,6 +880,10 @@ li a{
     margin-left: 394px;
 }
 
+.btn_5:hover {
+
+}
+
 .sub_title_5 p{
     font-family: "Noto Sans KR", sans-serif;
     font-size: 50px;
@@ -888,6 +987,7 @@ li a{
     box-shadow:none;
     border:none;
     margin-top: 60px;
+    cursor: pointer;
 }
 
 .bxslider2{
@@ -906,10 +1006,12 @@ li a{
 
     .bxslider1{
         display: none;
+        
     }
 
     .bxslider2{
         display: block;
+        cursor: pointer;
     }
 
     .wrap .bx-wrapper{
