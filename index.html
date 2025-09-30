@@ -15,10 +15,15 @@
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
+
 </head>
 <body>
 
@@ -342,7 +347,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                         <div class="mo_con_wrap_2">
+                        <div class="mo_con_wrap_2">
                             <div class="con_2">
                                 <a href="#">
                                     <img src="img/section_2/sec_2_img5.webp" alt="img">
@@ -364,7 +369,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                         <div class="mo_con_wrap_2">
+                        <div class="mo_con_wrap_2">
                             <div class="con_2">
                                 <a href="#">
                                     <img src="img/section_2/sec_2_img7.webp" alt="img">
@@ -388,6 +393,9 @@
                 </div>
 
                 <div class="swiper-pagination"></div>
+                <div class="swiper-pagination-bullet-active"></div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
+
             </div>
 
 
@@ -427,8 +435,8 @@
                         <div class="mo_title_3">
                             <div class="mo_sub_title_3">
                                 <h4>매력적인 드레이피 실루엣</h4>
-                                <p>타이즈처럼 
-                                편안하고 부드러운 착용감으로<br>
+                                <p>타이즈처럼 <br>
+                                편안하고 부드러운 착용감으로
                                 일상에 여유를 더해보세요. </p>
                             </div>
                             
@@ -438,7 +446,7 @@
                         </div>
                     </div>
 
-                    <img class="yoga_2" src="img/section_3/ChatGPT Im.png" alt="yoga">
+                    <!-- <img class="yoga_2" src="img/section_3/ChatGPT Im.png" alt="yoga"> -->
 
 
                 </a>
@@ -577,7 +585,7 @@
                 <h3>#LULULEMON</h3>
             </a>
 
-            <div class="swiper sec_6">
+            <!-- <div class="swiper sec_6">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide con_6">
                         <a href="sub/sonylife/index.html">
@@ -605,7 +613,23 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+            <ul class="bxslider1">
+                <li><img src="img/section_6/sec_6_1.png"></li>
+                <li><img src="img/section_6/sec_6_2.png"></li>
+                <li><img src="img/section_6/sec_6_3.png"></li>
+                <li><img src="img/section_6/sec_6_4.png"></li>
+                <li><img src="img/section_6/sec_6_5.png"></li>
+            </ul>
+
+            <ul class="bxslider2">
+                <li><img src="img/section_6/sec_6_1.png"></li>
+                <li><img src="img/section_6/sec_6_2.png"></li>
+                <li><img src="img/section_6/sec_6_3.png"></li>
+                <li><img src="img/section_6/sec_6_4.png"></li>
+                <li><img src="img/section_6/sec_6_5.png"></li>
+            </ul>
 
         </section>
 
@@ -646,6 +670,9 @@
 
         </footer>
     </div>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+  </script>
 </body>
 </html>
