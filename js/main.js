@@ -102,7 +102,7 @@ $(document).ready(function(){
     slideWidth: 260,
     slideMargin: 10,
     ticker: true,
-    speed: 12000
+    speed: 15000
 
   });
 

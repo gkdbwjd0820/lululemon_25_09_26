@@ -1,6 +1,12 @@
 @import url(reset.css);
 @import url(common.css);
 
+.wrap{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 header{
     width: 100%;
     position: fixed;
@@ -105,7 +111,7 @@ li a{
         width: 100%;
         height: 0;
         /* background-color: #fff; */
-        background: rgba(0, 0, 0, 0.4); /* 반투명 어두운 배경 */
+        background: rgba(225, 225, 225, 0.4); /* 반투명 어두운 배경 */
         position: absolute;
         top: 0;
         right: 0;
@@ -142,7 +148,7 @@ li a{
 }
 
 .sec_1_bg{
-    padding-top: 120px;
+    padding-top: 110px;
     position: relative;
 }
 
@@ -163,7 +169,7 @@ li a{
 .left_btn{
     width: 300px;
     position: absolute;
-    top: 758px;
+    top: 754px;
     right: 140px;
     z-index: 20px;
 }
@@ -184,6 +190,8 @@ li a{
 .mo_section_1{
     display: none;
 }
+
+
 
 @media screen and (max-width: 768px){
 
@@ -211,10 +219,10 @@ li a{
 
 .sec_2_title p{
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     letter-spacing: -3px;
-    line-height: 55px;
+    line-height: 45px;
     color: #1d1d1d;
     opacity: 0.7;
     margin-top: 20px;
@@ -247,7 +255,7 @@ li a{
 }
 
 .women h4{
-      color: #fff; 
+    color: #fff; 
 }
 
 .men{
@@ -294,27 +302,58 @@ li a{
 .con_2{
     font-family: "Noto Sans KR", sans-serif;
     color: #1d1d1d;
-
     letter-spacing: -1px;
 }
 
-.con_2 img{
+.con_2_img_wrap {
+  position: relative;
+  width: 370px;   /* 원하는 사이즈 */
+  height: 454px;
+  overflow: hidden;
+}
+
+.con_2_img_wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.4s ease;
+}
+
+
+.con_2_img_wrap img{
     width: 100%;
+    object-fit: cover;
+}
+
+.con_2_img_wrap .hover_2 {
+  opacity: 0; /* 기본적으로 안보이게 */
+}
+
+.con_2_img_wrap:hover .hover_2 {
+  opacity: 1; /* 호버하면 나타나게 */
+}
+
+.con_2_img_wrap:hover .sec_2_img {
+  opacity: 0; /* 기본 이미지는 사라지게 */
 }
 
 .con_title_2{
-    margin-top: 30px;
+    margin-top: 16px;
 }
 
 .con_title_2 h4{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;  
-    opacity: 0.7;
-
+    opacity: 0.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .con_title_2 p{
-    margin-top: 20px;
+    margin-top: 12px;
     font-size: 20px; 
     font-weight: 700;  
 }
@@ -329,6 +368,13 @@ li a{
 
 .mo_con_wrap_2{
     display: none;
+}
+
+@media screen and (max-width: 1700px){
+    .con_title_2 h4{
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -389,12 +435,19 @@ li a{
     .mo_con_title_2 h4{
         margin-top: 15px;
         font-size: 12px;
-        opacity: 0.7;
+        font-weight: 500;  
+        opacity: 0.5;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
 
+    }
+
+    .con_title_2 p{
+        margin-top: 12px;
+        font-size: 20px; 
+        font-weight: 700;  
     }
 
     .swiper-pagination-bullet-active:first-child,
@@ -438,16 +491,16 @@ li a{
     }
 
     .mo_con_title_2 h4{
-        margin-top: 15px;
+        margin-top: 10px;
         font-size: 12px;
-        opacity: 0.7;
         -webkit-line-clamp: 1;
         line-clamp: 1;
     }
 
     .mo_con_title_2 p{
-        margin-top: 10px;
-        font-size: 14px;   
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 700;   
     }
 
 
@@ -529,6 +582,7 @@ li a{
     margin-top: 170px;
     margin-left: 230px;
     position: relative;
+    overflow: hidden;
 }
 
 .bar, .bar2{
@@ -583,6 +637,15 @@ li a{
     display: none;
 }
 
+@media screen and (max-width: 1700px){
+    
+    .more_btn{
+        background-color: #fff;
+        width: 30%;
+    }
+
+}
+
 @media screen and (max-width: 768px){
     .section_3{
         display: none;
@@ -590,6 +653,7 @@ li a{
 
     .mo_section_3{
         display: block;
+        overflow: hidden;
     }
 
     .mo_bg_3{
@@ -662,6 +726,7 @@ li a{
 .section_4{
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 
@@ -675,10 +740,10 @@ li a{
 
 .con_left_4 p{
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     letter-spacing: -3px;
-    line-height: 55px;
+    line-height: 45px;
     color: #1d1d1d;
     opacity: 0.7;
     margin-top: 20px;
@@ -692,6 +757,8 @@ li a{
     margin-top: 30px;
     padding-left: 100px;
 }
+
+
 
 .accessory{
   width: 147px; /* men/accessory는 각자 조절 */
@@ -715,9 +782,16 @@ li a{
   color: #fff;
 }
 
+.bg_4{
+    position: absolute;
+    /* width: 36.5%; */
+    top: 400px;
+    left: 0;
+}
+
 
 .bg_4 img{
-    width: 700px;
+    width: 100%;
     margin-top: 200px;
 }
 
@@ -726,22 +800,28 @@ li a{
     grid-template-columns: repeat(2, 2fr);
     row-gap: 50px;
     column-gap: 20px;
-    padding-left: 120px;
+    padding-left: 350px;
     padding-right: 100px;
     margin-bottom: 80px;
 }
 
 .con_4{
+    /* width: 22%; */
     font-family: "Noto Sans KR", sans-serif;
     letter-spacing: -1px;
     color: #1d1d1d;
 }
 
+.con_4 img{
+    width: 100%;
+    object-fit: cover;
+}
+
 .con_title_4 h4{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    opacity: 0.7;
-    margin-top: 30px;
+    opacity: 0.5;
+    margin-top: 20px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -751,7 +831,15 @@ li a{
 .con_title_4 p{
     font-size: 22px;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1700px){
+
+    .con_right_4{
+        row-gap: 0px;
+    }
+
 }
 
 
@@ -794,22 +882,20 @@ li a{
         line-height: 25px;
     }
 
+
     .bg_4 img{
-        width: 352px;
         margin-top: unset;
     }
 
     .con_right_4{
+        /* width: 100%; */
         position: absolute;
         top: 265px;
         left: 0;
-    }
-
-    .con_right_4{
         row-gap: 30px;
         column-gap: 18px;
     }
-    
+
     .con_title_4 h4{
         font-size: 12px;
         margin-top: 15px;
@@ -846,6 +932,22 @@ li a{
     .section_4{
         min-height: 720px;
     }
+
+    .bg_4{
+        top: 220px;
+    }
+
+    .con_title_4 h4{
+        margin-top: 15px;
+    }
+
+    .con_title_4 p{
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+
+
 }
 
 
@@ -880,9 +982,6 @@ li a{
     margin-left: 394px;
 }
 
-.btn_5:hover {
-
-}
 
 .sub_title_5 p{
     font-family: "Noto Sans KR", sans-serif;
@@ -903,6 +1002,21 @@ li a{
     display: none;
 }
 
+@media screen and (max-width: 1700px){
+
+    .bg_5 h3{
+        font-size: 180px;
+        line-height: 140px;
+        top: 200px;
+        left: 710px;
+    }
+
+    .sub_title_5 p{
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
 @media screen and (max-width: 768px){
     .section_5{
         display: none;
@@ -912,6 +1026,7 @@ li a{
         display: block;
         position: relative;
         padding-top: 80px;
+        overflow: hidden;
     }
     
     .bg_5 h3{
@@ -954,8 +1069,8 @@ li a{
     .bg_5 h3{
         font-size: 70px;
         line-height: 55px;
-        top: 213px;
-        left: 130px;
+        top: 43%;
+        left: 32%;
         letter-spacing: -1px;
     }
 
@@ -1072,6 +1187,7 @@ footer{
 .footer_title img{
     width: 250px;
     margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 .footer_sub h4{
