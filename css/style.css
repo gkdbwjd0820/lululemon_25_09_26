@@ -219,10 +219,10 @@ li a{
 
 .sec_2_title p{
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
     letter-spacing: -3px;
-    line-height: 45px;
+    line-height: 50px;
     color: #1d1d1d;
     opacity: 0.7;
     margin-top: 20px;
@@ -307,7 +307,9 @@ li a{
 
 .con_2_img_wrap {
   position: relative;
-  width: 370px;   /* 원하는 사이즈 */
+  /* width: 100%;
+  height: 500%; */
+  /* width: 370px;    */
   height: 454px;
   overflow: hidden;
 }
@@ -323,6 +325,7 @@ li a{
 
 .con_2_img_wrap img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -507,7 +510,7 @@ li a{
 }
 
 
-/* sec_2 ing */
+/* sec_2 end */
 
 .con_3{
     position: relative;
@@ -740,10 +743,10 @@ li a{
 
 .con_left_4 p{
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
     letter-spacing: -3px;
-    line-height: 45px;
+    line-height: 50px;
     color: #1d1d1d;
     opacity: 0.7;
     margin-top: 20px;
@@ -785,22 +788,23 @@ li a{
 .bg_4{
     position: absolute;
     /* width: 36.5%; */
-    top: 400px;
+    top: 500px;
     left: 0;
 }
 
 
 .bg_4 img{
     width: 100%;
-    margin-top: 200px;
+    /* margin-top: 200px; */
 }
+
+/* -------right -------- */
 
 .con_right_4{
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    row-gap: 50px;
-    column-gap: 20px;
-    padding-left: 350px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 60px;
+    column-gap: 30px;
     padding-right: 100px;
     margin-bottom: 80px;
 }
@@ -812,9 +816,34 @@ li a{
     color: #1d1d1d;
 }
 
-.con_4 img{
-    width: 100%;
-    object-fit: cover;
+.con_4_img_wrap {
+  position: relative;
+  width: 415px;
+  height: 500px;
+  /* width: 100%;
+  padding-top: 120%; */
+  overflow: hidden;
+}
+
+.con_4_img_wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.con_4_img_wrap .hover_4 {
+  opacity: 0; /* 기본적으로 안보이게 */
+}
+
+.con_4_img_wrap:hover .hover_4 {
+  opacity: 1; /* 호버하면 나타나게 */
+}
+
+.con_4_img_wrap:hover .con_4_img {
+  opacity: 0; /* 기본 이미지는 사라지게 */
 }
 
 .con_title_4 h4{
@@ -913,6 +942,13 @@ li a{
         border-color: rgba(29,29,29,.5);
         color: rgba(29,29,29,.5);
     }
+
+      .con_4_img_wrap .hover_4 {
+        opacity: 0 !important;  /* 항상 숨김 */
+    }
+    .con_4_img_wrap .con_4_img {
+        opacity: 1 !important;  /* 항상 기본 이미지 */
+    }
         
 }
 
@@ -946,6 +982,16 @@ li a{
         margin-top: 8px;
     }
 
+    .con_4_img_wrap {
+        width: 100%;      /* 부모 그리드/화면 가로폭 꽉 차게 */
+        height: auto;     /* 높이 자동 */
+        aspect-ratio: 5/6; /* 비율 유지 (최신 브라우저) */
+    }
+    .con_4_img_wrap img {
+        position: relative; /* absolute 빼줘야 함 */
+        width: 100%;
+        height: auto;       /* 가로폭에 맞춰 세로 자연스레 줄어듦 */
+    }
 
 
 }
