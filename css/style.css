@@ -678,8 +678,8 @@ li a{
         width: 188px;
         display: flex;
         flex-direction: column;
-        padding-top: 260px;
-        padding-left: 150px;
+        margin-top: 260px;
+        margin-left: 45%;
     }
     
     .mo_sub_title_3{
@@ -1339,7 +1339,7 @@ footer{
     .footer_title img{
         width: 90%;
         margin-top: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
 
