@@ -686,7 +686,6 @@ li a{
         grid-area: title;
         display:flex;
         flex-direction:column;
-        justify-content:center;
         gap: clamp(10px, 2.5vw, 18px)
     }
 
