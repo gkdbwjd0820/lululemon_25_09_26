@@ -683,6 +683,7 @@ li a{
     }
     
     .mo_sub_title_3{
+        font-family: "Noto Sans KR", sans-serif;
         grid-area: title;
         display:flex;
         flex-direction:column;
