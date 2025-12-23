@@ -483,7 +483,7 @@ li a{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
 
     .mo_sec_2 {
         min-height: 320px;/* 이미지+불릿 합친 높이만큼 */
@@ -875,7 +875,6 @@ li a{
 @media screen and (max-width: 768px){
 
     .section_4{
-        /* display: unset; */
         position: relative;
         min-height: 1120px;
     }
@@ -917,7 +916,6 @@ li a{
     }
 
     .con_right_4{
-        /* width: 100%; */
         position: absolute;
         top: 265px;
         left: 0;
@@ -949,6 +947,19 @@ li a{
     .con_4_img_wrap .con_4_img {
         opacity: 1 !important;  /* 항상 기본 이미지 */
     }
+
+    
+    .con_4_img_wrap {
+        width: 100%;      /* 부모 그리드/화면 가로폭 꽉 차게 */
+        height: auto;     /* 높이 자동 */
+        aspect-ratio: 5/6; /* 비율 유지 (최신 브라우저) */
+    }
+    
+    .con_4_img_wrap img {
+        position: relative; /* absolute 빼줘야 함 */
+        width: 100%;
+        height: auto;       /* 가로폭에 맞춰 세로 자연스레 줄어듦 */
+    }
         
 }
 
@@ -962,11 +973,24 @@ li a{
     .section_4{
         min-height: 820px;
     }
+
+    .con_4_img_wrap {
+        width: 100%;      /* 부모 그리드/화면 가로폭 꽉 차게 */
+        height: auto;     /* 높이 자동 */
+        aspect-ratio: 5/6; /* 비율 유지 (최신 브라우저) */
+    }
+    
+    .con_4_img_wrap img {
+        position: relative; /* absolute 빼줘야 함 */
+        width: 100%;
+        height: auto;       /* 가로폭에 맞춰 세로 자연스레 줄어듦 */
+    }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     .section_4{
         min-height: 720px;
+        padding-bottom: 40px;
     }
 
     .bg_4{
@@ -987,6 +1011,7 @@ li a{
         height: auto;     /* 높이 자동 */
         aspect-ratio: 5/6; /* 비율 유지 (최신 브라우저) */
     }
+
     .con_4_img_wrap img {
         position: relative; /* absolute 빼줘야 함 */
         width: 100%;
@@ -1099,7 +1124,7 @@ li a{
 
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
 
     .sub_title_5{
         bottom: 20px;
@@ -1309,7 +1334,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
 
     footer{
         margin-top: 80px;
