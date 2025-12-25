@@ -54,6 +54,8 @@ $(document).ready(function(){
         loop: false,
         observer: true,
         observeParents: true,
+
+        
     });
     
 
